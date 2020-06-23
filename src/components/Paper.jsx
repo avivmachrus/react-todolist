@@ -10,6 +10,7 @@ const Paper = ({ children }) => {
 };
 
 Paper.propTypes = {
+  // define children contain type one or two react component
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
