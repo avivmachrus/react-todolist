@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Todo = (props) => {
   return (
     <div className="todo">
+      {/* create props called text */}
       <span className="todo-text">{props.text}</span>
     </div>
   );
