@@ -66,4 +66,5 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+  cursor: pointer;
 }
