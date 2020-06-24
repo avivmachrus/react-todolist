@@ -16,11 +16,15 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    // take recent todos from todos(...todos) and add with new todos with value
-    const addedTodo = [...todos, { text: value, isCompleted: false }];
+    if (todos.length < 10) {
+      // take recent todos from todos(...todos) and add with new todos with value
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
 
-    // set addedTodo to todos
-    setTodos(addedTodo);
+      // set addedTodo to todos
+      setTodos(addedTodo);
+    } else {
+      alert("only 10 todos is allowed!");
+    }
   };
 
   const completeTodo = (index) => {
@@ -30,8 +34,6 @@ const TodoList = () => {
   };
 
   const showAddToggle = () => setShowAdd(!showAdd);
-
-  console.log("todos", todos);
 
   return (
     <Paper>
