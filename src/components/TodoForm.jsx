@@ -9,9 +9,16 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
     // check empty form
     if (!value) {
-      alert("Empty Form Not Allowed");
+      alert("Empty todo not allowed !");
       return;
     }
+
+    if (value.length > 40) {
+      alert("Please create a shorter todo !");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
