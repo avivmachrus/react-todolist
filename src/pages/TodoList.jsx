@@ -7,9 +7,9 @@ import Todos from "../components/Todos";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
-    { text: "Learning React!" },
-    { text: "Learning React!" },
-    { text: "Learning React!" },
+    { text: "Learning React!", isCompleted: false },
+    { text: "Learning React!", isCompleted: false },
+    { text: "Learning React!", isCompleted: false },
   ]);
 
   // show and hide (toggle) add button state
@@ -17,19 +17,27 @@ const TodoList = () => {
 
   const addTodo = (value) => {
     // take recent todos from todos(...todos) and add with new todos with value
-    const addedTodo = [...todos, { text: value }];
+    const addedTodo = [...todos, { text: value, isCompleted: false }];
 
     // set addedTodo to todos
     setTodos(addedTodo);
   };
 
+  const completeTodo = (index) => {
+    const addedTodo = [...todos];
+    addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
+    setTodos(addedTodo);
+  };
+
   const showAddToggle = () => setShowAdd(!showAdd);
+
+  console.log("todos", todos);
 
   return (
     <Paper>
       <Header showAddToggle={showAddToggle} showAdd={showAdd} />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
-      <Todos todos={todos} />
+      <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
   );
 };
