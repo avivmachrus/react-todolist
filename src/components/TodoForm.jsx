@@ -12,7 +12,7 @@ const TodoForm = ({ addTodo }) => {
       alert("Empty Form Not Allowed");
       return;
     }
-    alert(value);
+    addTodo(value);
     setValue("");
   };
 
