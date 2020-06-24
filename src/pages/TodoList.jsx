@@ -12,6 +12,9 @@ const TodoList = () => {
     { text: "Learning React!" },
   ]);
 
+  // show and hide (toggle) add button state
+  const [showAdd, setShowAdd] = useState(false);
+
   const addTodo = (value) => {
     // take recent todos from todos(...todos) and add with new todos with value
     const addedTodo = [...todos, { text: value }];
@@ -20,9 +23,11 @@ const TodoList = () => {
     setTodos(addedTodo);
   };
 
+  const showAddToggle = () => setShowAdd(!showAdd);
+
   return (
     <Paper>
-      <Header />
+      <Header showAddToggle={showAddToggle} />
       <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
