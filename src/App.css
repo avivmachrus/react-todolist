@@ -39,7 +39,7 @@ html {
 .container {
   margin-top: 100px;
   width: 600px;
-  min-height: 660px;
+  height: 800px;
   background-color: #f2eecb;
   border-radius: 4px;
   padding: 32px;
@@ -47,7 +47,7 @@ html {
 
 .frame {
   border: 1px solid var(--main-black-color);
-  min-height: 660px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
