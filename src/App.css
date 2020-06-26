@@ -28,42 +28,6 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.add {
-  padding: 16px;
-}
-
-.add-form {
-  display: flex;
-  align-items: flex-start;
-}
-
-.add-input {
-  background: none;
-  border: none;
-  padding: 0 64px;
-  flex: 1;
-  border-bottom: 1px solid var(--main-red-color);
-  outline: none;
-  font-family: "Homemade Apple", sans-serif;
-  font-size: 1.6rem;
-  text-transform: lowercase;
-}
-
-.add-btn {
-  font-size: 1.8rem;
-  font-family: "Bungee", sans-serif;
-  padding: 10px;
-  padding-right: unset;
-  cursor: pointer;
-  background: unset;
-  border: unset;
-  outline: unset;
-}
-
-.add-btn.main-black-color:active {
-  text-shadow: 1px 1px 2px var(--main-black-color);
-}
-
 .todos {
   display: flex;
   flex-direction: column;

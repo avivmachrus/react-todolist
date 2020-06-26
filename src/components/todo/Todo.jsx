@@ -6,7 +6,6 @@ import styles from "./todo.module.css";
 const Todo = ({ text, completeTodo, index, isCompleted }) => {
   return (
     <div className={styles.todo} onClick={() => completeTodo(index)}>
-      {/* create props called text */}
       <span
         className={styles.todoText}
         style={{ textDecoration: isCompleted ? "line-through" : "initial" }}
