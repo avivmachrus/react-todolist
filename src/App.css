@@ -15,6 +15,14 @@
   color: var(--main-red-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 html {
   font-size: 10px;
 }
@@ -59,7 +67,7 @@ html {
 }
 
 .header-title {
-  flex: 1;
+  width: 52%;
   text-align: center;
   font-size: 3.6rem;
   font-family: "Homemade Apple", sans-serif;
@@ -68,13 +76,15 @@ html {
 }
 
 .header-btn {
+  width: 42%;
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
-  padding: 8px;
+  padding: 15px;
   background: unset;
   border: unset;
   outline: unset;
   cursor: pointer;
+  margin-top: -15px;
 }
 
 .header-btn.main-red-color:active {
