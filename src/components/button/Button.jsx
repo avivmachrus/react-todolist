@@ -4,15 +4,8 @@ import styles from "./button.module.css";
 import cx from "classnames";
 
 const Button = ({ text, onClick, color, align }) => {
-  // const className = [
-  //   "header-btn",
-  //   color === "black" && "main-black-color",
-  //   color === "red" && "main-red-color",
-  //   align === "left" && "align-left",
-  //   align === "right" && "align-right",
-  // ].join(" ");
   const className = cx(styles.headerBtn, {
-    // es6 if syntax
+    // es6 'if' syntax
     // if color === 'black' then styles.mainBlackColor
     [styles.mainBlackColor]: color === "black",
     [styles.mainRedColor]: color === "red",
