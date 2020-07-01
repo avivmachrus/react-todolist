@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 
-export const container = ({ theme }) => {
+export const paper = ({ theme }) => {
   return css`
     margin-top: 100px;
     width: 600px;

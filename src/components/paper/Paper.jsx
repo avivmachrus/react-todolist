@@ -12,7 +12,7 @@ const Paper = ({ children }) => {
   // );
   const theme = useTheme();
   return (
-    <div css={styles.container({ theme })}>
+    <div css={styles.paper({ theme })}>
       <div css={styles.frame({ theme })}>{children}</div>
     </div>
   );
