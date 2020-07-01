@@ -1,7 +1,8 @@
 import { css } from "@emotion/core";
 
-export const button = ({ color, align, theme }) => {
+export const button = ({ color, align, theme, shadow }) => {
   let textColor;
+
   const {
     color: { primary },
   } = theme;
