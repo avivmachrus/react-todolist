@@ -22,6 +22,11 @@ const Button = ({ text, onClick, color, align }) => {
   //     [styles.alignRight]: align === "right",
   //   });
 
+  // return (
+  //   <button className={className} onClick={onClick}>
+  //     {text}
+  //   </button>
+  // );
   return (
     <button css={styles.button({ color, align })} onClick={onClick}>
       {text}
