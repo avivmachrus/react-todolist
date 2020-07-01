@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 // import styles from "./button.module.css";
 // import cx from "classnames";
 import * as styles from "./button.styles";
+import { useTheme } from "emotion-theming";
 
 const Button = ({ text, onClick, color, align }) => {
   //   // const classNames = [
@@ -27,8 +28,10 @@ const Button = ({ text, onClick, color, align }) => {
   //     {text}
   //   </button>
   // );
+  const theme = useTheme();
+
   return (
-    <button css={styles.button({ color, align })} onClick={onClick}>
+    <button css={styles.button({ color, align, theme })} onClick={onClick}>
       {text}
     </button>
   );

@@ -7,13 +7,13 @@ export const header = () => {
   `;
 };
 
-export const headerTitle = () => {
+export const headerTitle = (theme) => {
   return css`
     width: 52%;
     text-align: center;
     font-size: 3.6rem;
     font-family: "Homemade Apple", sans-serif;
     text-transform: lowercase;
-    color: var(--main-black-color);
+    color: ${theme.color.primary.black};
   `;
 };
