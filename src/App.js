@@ -11,6 +11,11 @@ const theme = {
       red: "#e06262",
     },
   },
+  background: {
+    primary: {
+      paper: "#f2eecb",
+    },
+  },
 };
 
 function App() {
