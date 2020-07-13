@@ -12,7 +12,7 @@ const theme = {
     },
   },
   background: {
-    primary: {
+    main: {
       paper: "#f2eecb",
     },
   },

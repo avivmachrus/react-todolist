@@ -5,7 +5,7 @@ export const paper = ({ theme }) => {
     margin-top: 100px;
     width: 600px;
     height: 800px;
-    background-color: ${theme.background.primary.paper};
+    background-color: ${theme.background.main.paper};
     border-radius: 4px;
     padding: 32px;
   `;
