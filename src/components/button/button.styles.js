@@ -20,7 +20,6 @@ export const button = ({ color, align, theme }) => {
   }
 
   return css`
-    width: 42%;
     font-size: 1.8rem;
     font-family: "Bungee", sans-serif;
     padding: 15px;

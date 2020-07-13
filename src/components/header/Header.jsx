@@ -5,19 +5,29 @@ import PropTypes from "prop-types";
 import Button from "../button/Button";
 import * as styles from "./header.styles";
 import { useTheme } from "emotion-theming";
+import Container from "../../layout/Container";
+import Item from "../../layout/Item";
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   const theme = useTheme();
   return (
-    <section css={styles.header}>
-      {/* add button */}
-      <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
+    <section className="header-component">
+      <Container alignItems="flex-start">
+        {/* add button */}
+        <Item flex={1}>
+          <Button text={showAdd ? "Finish" : "Add"} onClick={showAddToggle} />
+        </Item>
 
-      {/* title */}
-      <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
+        {/* title */}
+        <Item flex={2}>
+          <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
+        </Item>
 
-      {/* clear button */}
-      <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+        {/* clear button */}
+        <Item flex={1} textAlign="right">
+          <Button text="Clear" onClick={clearTodos} color="red" align="right" />
+        </Item>
+      </Container>
     </section>
   );
 };
