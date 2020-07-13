@@ -10,6 +10,7 @@ const Container = ({
   alignItems,
   alignContent,
   height,
+  minHeight,
 }) => {
   const containerStyles = css`
     display: flex;
@@ -19,6 +20,7 @@ const Container = ({
     align-items: ${alignItems};
     align-content: ${alignContent};
     height: ${height};
+    min-height: ${minHeight};
   `;
   return (
     <div className="flex-container" css={containerStyles}>
@@ -34,6 +36,7 @@ Container.defaultProps = {
   alignItems: "stretch",
   alignContent: "stretch",
   height: "auto",
+  minHeight: "initial",
 };
 
 Container.propTypes = {
@@ -88,6 +91,7 @@ Container.propTypes = {
     "last baseline",
   ]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  minHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Container;
