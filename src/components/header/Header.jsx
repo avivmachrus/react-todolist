@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 // import styles from "./header.module.css";
 
 import Button from "../button/ButtonClass";
@@ -21,6 +22,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
         {/* title */}
         <Item flex={2}>
           <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
+          <Link to="./about">About Page</Link>
         </Item>
 
         {/* clear button */}
