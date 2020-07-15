@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Paper from "../components/paper/PaperClass";
 import Header from "../components/header/HeaderClass";
@@ -8,11 +8,21 @@ import Todos from "../components/todos/TodosClass";
 import Container from "../layout/Container";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState([
-    { text: "Learning React!", isCompleted: false },
-    { text: "Learning React!", isCompleted: false },
-    { text: "Learning React!", isCompleted: false },
-  ]);
+  // const [todos, setTodos] = useState([
+  //   { text: "Learning React!", isCompleted: false },
+  //   { text: "Learning React!", isCompleted: false },
+  //   { text: "Learning React!", isCompleted: false },
+  // ]);
+  const [todos, setTodos] = useState(
+    // data in localstorage is a string
+    // if there is todos in localStorage take and parse into JSON
+    // else make an empty array
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   // show and hide (toggle) add button state
   const [showAdd, setShowAdd] = useState(false);
