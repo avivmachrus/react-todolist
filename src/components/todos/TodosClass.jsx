@@ -4,7 +4,7 @@ import { withTheme } from "emotion-theming";
 import styled from "@emotion/styled";
 
 import Todo from "../todo/TodoClass";
-import Container from "../../layout/Container";
+import Container from "../../layout/ContainerClass";
 
 const StyledTodosPlaceholderText = styled.div`
   font-family: "Homemade Apple", sans-serif;

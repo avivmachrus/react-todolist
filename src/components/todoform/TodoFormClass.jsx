@@ -4,8 +4,8 @@ import { withTheme } from "emotion-theming";
 import styled from "@emotion/styled";
 
 import Button from "../button/Button";
-import Container from "../../layout/Container";
-import Item from "../../layout/Item";
+import Container from "../../layout/ContainerClass";
+import Item from "../../layout/ItemClass";
 
 const StyledInput = styled.input`
   text-align: center;

@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 import { withTheme } from "emotion-theming";
 
 import Button from "../button/ButtonClass";
-import Container from "../../layout/Container";
-import Item from "../../layout/Item";
+import Container from "../../layout/ContainerClass";
+import Item from "../../layout/ItemClass";
 
 const StyledH1 = styled.h1`
   text-align: center;

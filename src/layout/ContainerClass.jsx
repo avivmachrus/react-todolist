@@ -17,7 +17,6 @@ class Container extends React.Component {
   render() {
     const {
       children,
-      theme,
       flexDirection,
       flexWrap,
       justifyContent,
@@ -30,7 +29,6 @@ class Container extends React.Component {
     return (
       <StyledContainer
         className="flex-container"
-        theme={theme}
         flexDirection={flexDirection}
         flexWrap={flexWrap}
         justifyContent={justifyContent}
