@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Paper from "../components/paper/Paper";
 import Header from "../components/header/Header";
@@ -27,7 +27,7 @@ const TodoList = () => {
   const [todos, setTodos] = useStateWithLocalStorage("todos");
 
   // show and hide (toggle) add button state
-  const [showAdd, setShowAdd] = useState(false);
+  const [showAdd, setShowAdd] = useStateWithLocalStorage("showAdd");
 
   const addTodo = (value) => {
     if (todos.length < 10) {
@@ -47,7 +47,13 @@ const TodoList = () => {
     setTodos(addedTodo);
   };
 
-  const clearTodos = () => !showAdd && setTodos([]);
+  const clearTodos = () => {
+    if (showAdd) {
+      alert("click Finish to clear your todos");
+      return;
+    }
+    setTodos([]);
+  };
 
   const showAddToggle = () => setShowAdd(!showAdd);
 
