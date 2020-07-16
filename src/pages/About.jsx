@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Paper from "../components/paper/Paper";
 import Container from "../layout/Container";
+
+import AboutContent from "../components/aboutContent/aboutContent";
 
 const About = () => {
   return (
@@ -10,10 +11,10 @@ const About = () => {
       <Container
         flexDirection="column"
         justifyContent="space-between"
-        alignItems="center"
-      />
-      <h1>this is About Page</h1>
-      <Link to="./">Back to Home</Link>
+        height="100%"
+      >
+        <AboutContent />
+      </Container>
     </Paper>
   );
 };

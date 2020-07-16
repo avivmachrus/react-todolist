@@ -27,7 +27,7 @@ Item.propTypes = {
     PropTypes.node,
   ]),
   flex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  align: PropTypes.oneOf(["left", "right", "center", "justify"]),
+  textAlign: PropTypes.oneOf(["left", "right", "center", "justify"]),
   padding: PropTypes.string,
 };
 
